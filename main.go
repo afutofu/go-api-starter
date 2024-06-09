@@ -4,17 +4,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/afutofu/go-api-starter/internal/handlers"
-	"github.com/go-chi/chi"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/afutofu/go-api-starter/router"
 )
 
 func main() {
-
-	log.SetReportCaller(true)
-
-	var r *chi.Mux = chi.NewRouter()
-	handlers.Handler(r)
+	r := router.SetupRouter()
 
 	fmt.Println("Starting GO API service...")
 
@@ -29,5 +25,4 @@ func main() {
 	if err != nil {
 		log.Error(err)
 	}
-
 }
