@@ -5,8 +5,8 @@ Starter implementation of authentication and todo RESTful APIs with OpenAPI (Swa
 Access other branches to find more modular implementations of authentication and todo APIs:
 
 - [rest-auth](https://github.com/afutofu/go-api-starter/tree/rest-auth): Auth API
-- [rest-auth-openapi](https://github.com/afutofu/go-api-starter/tree/rest-auth-openapi): Auth API with OpenAPI UI
 - [rest-todo](https://github.com/afutofu/go-api-starter/tree/rest-todo): Todo API
+- [rest-auth-openapi](https://github.com/afutofu/go-api-starter/tree/rest-auth-openapi): Auth API with OpenAPI UI
 - [rest-todo-openapi](https://github.com/afutofu/go-api-starter/tree/rest-todo-openapi): Todo API with OpenAPI UI
 
 ## Table of Contents
