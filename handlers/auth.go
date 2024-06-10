@@ -8,6 +8,7 @@ import (
 	"github.com/afutofu/go-api-starter/models"
 	"github.com/afutofu/go-api-starter/storage"
 	"github.com/dgrijalva/jwt-go"
+	log "github.com/sirupsen/logrus"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -38,6 +39,8 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 	user.Password = string(hashedPassword)
 	storage.SaveUser(&user)
+
+	log.Info("User registered: ", user)
 
 	w.WriteHeader(http.StatusCreated)
 }
@@ -86,6 +89,8 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		Value:   tokenString,
 		Expires: expirationTime,
 	})
+
+	log.Info("User logged in: ", storedUser)
 }
 
 /*
@@ -104,4 +109,6 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 		Value:   "",
 		Expires: time.Now(),
 	})
+
+	log.Info("User logged out")
 }
