@@ -5,8 +5,8 @@ This branch includes a starter implementation of authentication in Go.
 Access other branches to find more implementations of authentication and todo APIs:
 
 - [main](https://github.com/afutofu/go-api-starter): Auth & Todo API with OpenAPI UI
-- [rest-auth-openapi](https://github.com/afutofu/go-api-starter/tree/rest-auth-openapi): Auth API with OpenAPI UI
 - [rest-todo](https://github.com/afutofu/go-api-starter/tree/rest-todo): Todo API
+- [rest-auth-openapi](https://github.com/afutofu/go-api-starter/tree/rest-auth-openapi): Auth API with OpenAPI UI
 - [rest-todo-openapi](https://github.com/afutofu/go-api-starter/tree/rest-todo-openapi): Todo API with OpenAPI UI
 
 ## Table of Contents
