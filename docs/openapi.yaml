@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Authentication API
+  title: Todo & Authentication API
   version: 1.0.0
 paths:
   /register:
@@ -55,11 +55,95 @@ paths:
                 type: string
         "500":
           description: Internal server error
+  /todos:
+    get:
+      summary: Get all todos
+      responses:
+        "200":
+          description: A list of todos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Todo"
+    post:
+      summary: Create a new todo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Todo"
+      responses:
+        "201":
+          description: Todo created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+  /todos/{id}:
+    get:
+      summary: Get a todo by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: A todo item
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+        "404":
+          description: Todo not found
+    put:
+      summary: Update a todo by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Todo"
+      responses:
+        "200":
+          description: Todo updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+        "404":
+          description: Todo not found
+    delete:
+      summary: Delete a todo by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Todo deleted
+        "404":
+          description: Todo not found
 components:
   schemas:
     User:
       type: object
       properties:
+        id:
+          type: integer
+          readOnly: true
         username:
           type: string
           example: testuser
@@ -69,3 +153,18 @@ components:
       required:
         - username
         - password
+    Todo:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        text:
+          type: string
+          example: Buy milk
+        completed:
+          type: boolean
+          example: false
+      required:
+        - text
+        - completed
