@@ -64,3 +64,11 @@ func DeleteTodoByID(id int) bool {
 	}
 	return false
 }
+
+func ClearTodos() {
+	mu.Lock()
+	defer mu.Unlock()
+	todos = nil
+	nextID = 0
+	log.Info("Todos cleared")
+}
