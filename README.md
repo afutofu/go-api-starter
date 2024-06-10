@@ -133,6 +133,8 @@ Navigate to:
 http://localhost:8000/swagger
 ```
 
+![OpenAPI (Swagger) UI](openapi-image.png)
+
 ## Authors
 
 - [Afuza](https://github.com/afutofu): Create and maintain repository
