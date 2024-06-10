@@ -12,10 +12,11 @@ Access other branches to find more modular implementations of authentication and
 ## Table of Contents
 
 1. [Features](#features)
-2. [Setup](#setup)
-3. [Usage](#usage)
-4. [Access OpenAPI](#access-openapi-swagger-ui)
-5. [Authors](#authors)
+1. [Endpoints](#endpoints)
+1. [Setup](#setup)
+1. [Usage](#usage)
+1. [Access OpenAPI](#access-openapi-swagger-ui)
+1. [Authors](#authors)
 
 ## Features
 
