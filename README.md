@@ -1,6 +1,6 @@
 # Go API Starter
 
-This branch includes a starter implementation of authentication in Go.
+This branch includes a starter implementation of an authentication API in Go.
 
 Access other branches to find more implementations of authentication and todo APIs:
 
