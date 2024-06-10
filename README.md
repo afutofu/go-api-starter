@@ -2,7 +2,7 @@
 
 This branch includes a starter implementation of an auth API with OpenAPI (Swagger) documentation in Go.
 
-Access other branches to find more modular implementations of authentication and todo APIs:
+Access other branches to find more implementations of authentication and todo APIs:
 
 - [main](https://github.com/afutofu/go-api-starter): Auth & Todo API with OpenAPI UI
 - [rest-auth](https://github.com/afutofu/go-api-starter/tree/rest-auth): Auth API
