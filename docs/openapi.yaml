@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: Authentication API
+  version: 1.0.0
+paths:
+  /register:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "201":
+          description: User registered successfully
+        "400":
+          description: Bad request
+        "500":
+          description: Internal server error
+  /login:
+    post:
+      summary: User login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "200":
+          description: Login successful
+          headers:
+            Set-Cookie:
+              description: JWT token set in a cookie
+              schema:
+                type: string
+        "400":
+          description: Bad request
+        "401":
+          description: Invalid credentials
+        "500":
+          description: Internal server error
+  /logout:
+    post:
+      summary: User logout
+      responses:
+        "200":
+          description: Logout successful
+          headers:
+            Set-Cookie:
+              description: JWT token cleared
+              schema:
+                type: string
+        "500":
+          description: Internal server error
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        username:
+          type: string
+          example: testuser
+        password:
+          type: string
+          example: password123
+      required:
+        - username
+        - password
