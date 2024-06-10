@@ -13,6 +13,9 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+/*
+TestCreateTodoHandler tests the CreateTodo handler.
+*/
 func TestCreateTodoHandler(t *testing.T) {
 	storage.ClearTodos() // Clear the storage before running the test
 	todo := models.Todo{Text: "Test Todo", Completed: false}
@@ -34,6 +37,9 @@ func TestCreateTodoHandler(t *testing.T) {
 	assert.Equal(t, todo.Completed, createdTodo.Completed, "Expected todo status to match")
 }
 
+/*
+TestGetTodosHandler tests the GetTodos handler.
+*/
 func TestGetTodosHandler(t *testing.T) {
 	storage.ClearTodos() // Clear the storage before running the test
 	storage.AddTodo(&models.Todo{Text: "Test Todo 1", Completed: false})
@@ -54,6 +60,9 @@ func TestGetTodosHandler(t *testing.T) {
 	assert.Len(t, todos, 2, "Expected two todos in the response")
 }
 
+/*
+TestGetTodoHandler tests the GetTodo handler.
+*/
 func TestGetTodoHandler(t *testing.T) {
 	storage.ClearTodos() // Clear the storage before running the test
 	storage.AddTodo(&models.Todo{Text: "Test Todo", Completed: false})
@@ -75,6 +84,9 @@ func TestGetTodoHandler(t *testing.T) {
 	assert.Equal(t, false, todo.Completed, "Expected todo status to match")
 }
 
+/*
+TestUpdateTodoHandler tests the UpdateTodo handler.
+*/
 func TestUpdateTodoHandler(t *testing.T) {
 	storage.ClearTodos() // Clear the storage before running the test
 	storage.AddTodo(&models.Todo{Text: "Test Todo", Completed: false})
@@ -98,6 +110,9 @@ func TestUpdateTodoHandler(t *testing.T) {
 	assert.Equal(t, false, todo.Completed, "Expected todo status to match")
 }
 
+/*
+TestDeleteTodoHandler tests the DeleteTodo handler.
+*/
 func TestDeleteTodoHandler(t *testing.T) {
 	storage.ClearTodos() // Clear the storage before running the test
 	storage.AddTodo(&models.Todo{Text: "Test Todo", Completed: false})
