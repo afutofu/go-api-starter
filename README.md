@@ -12,9 +12,10 @@ Access other branches to find more implementations of authentication and todo AP
 ## Table of Contents
 
 1. [Features](#features)
-2. [Setup](#setup)
-3. [Usage](#usage)
-4. [Authors](#authors)
+2. [Endpoints](#endpoints)
+3. [Setup](#setup)
+4. [Usage](#usage)
+5. [Authors](#authors)
 
 ## Features
 
