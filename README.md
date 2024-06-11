@@ -1,6 +1,6 @@
 # Go API Starter
 
-Starter implementation of authentication and todo RESTful APIs with OpenAPI (Swagger) documentation in Go.
+Starter implementation of todo and auth REST APIs with OpenAPI (Swagger) documentation in Go.
 
 Access other branches to find more modular implementations of authentication and todo APIs:
 
