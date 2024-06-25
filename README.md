@@ -57,7 +57,7 @@ Access other branches to find more modular implementations of authentication and
 
    ```bash
    git clone https://github.com/afutofu/go-api-starter.git
-   cd projectname
+   cd go-api-starter
    ```
 
 2. Install dependencies:
@@ -91,7 +91,7 @@ curl -X POST http://localhost:8000/login -H "Content-Type: application/json" -d 
 Logout user:
 
 ```bash
-curl -X POST http://localhost:8000/register -H "Content-Type: application/json" -d '{"username":"testuser", "password":"password123"}'
+curl -X POST http://localhost:8000/logout
 ```
 
 ### Todo
@@ -111,19 +111,19 @@ curl -X GET http://localhost:8000/todos
 Get a Todo by ID:
 
 ```bash
-curl -X GET http://localhost:8000/todos/0
+curl -X GET http://localhost:8000/todos/1
 ```
 
 Update a Todo by ID:
 
 ```bash
-curl -X PUT http://localhost:8000/todos/0 -H "Content-Type: application/json" -d '{"text":"Updated Todo", "completed":true}'
+curl -X PUT http://localhost:8000/todos/1 -H "Content-Type: application/json" -d '{"text":"Updated Todo", "completed":true}'
 ```
 
 Delete a Todo by ID:
 
 ```bash
-curl -X DELETE http://localhost:8000/todos/0
+curl -X DELETE http://localhost:8000/todos/1
 ```
 
 ## Access OpenAPI (Swagger) UI
