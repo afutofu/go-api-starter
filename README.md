@@ -96,6 +96,8 @@ curl -X POST http://localhost:8000/logout
 
 ### Todo
 
+#### For each of the following, include the header "Authorization: Bearer x". Where x is the access token received from the server via the /auth/login route
+
 Create a Todo:
 
 ```bash
