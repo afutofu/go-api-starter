@@ -44,7 +44,7 @@ Access other branches to find more implementations of authentication and todo AP
 
    ```bash
    git clone https://github.com/afutofu/go-api-starter.git
-   cd projectname
+   cd go-api-starter
    git checkout rest-auth-openapi
    ```
 
@@ -79,7 +79,7 @@ curl -X POST http://localhost:8000/login -H "Content-Type: application/json" -d 
 Logout user:
 
 ```bash
-curl -X POST http://localhost:8000/register -H "Content-Type: application/json" -d '{"username":"testuser", "password":"password123"}'
+curl -X POST http://localhost:8000/logout
 ```
 
 ## Access OpenAPI (Swagger) UI
