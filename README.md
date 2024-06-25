@@ -41,7 +41,7 @@ Access other branches to find more implementations of authentication and todo AP
 
    ```bash
    git clone https://github.com/afutofu/go-api-starter.git
-   cd projectname
+   cd go-api-starter
    git checkout rest-todo
    ```
 
