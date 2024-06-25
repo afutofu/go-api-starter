@@ -72,7 +72,7 @@ curl -X POST http://localhost:8000/login -H "Content-Type: application/json" -d 
 Logout user:
 
 ```bash
-curl -X POST http://localhost:8000/register
+curl -X POST http://localhost:8000/logout
 ```
 
 ## Authors
