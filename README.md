@@ -48,7 +48,7 @@ Access other branches to find more implementations of authentication and todo AP
 
    ```bash
    git clone https://github.com/afutofu/go-api-starter.git
-   cd projectname
+   cd go-api-starter
    git checkout rest-todo-openapi
    ```
 
@@ -82,19 +82,19 @@ curl -X GET http://localhost:8000/todos
 Get a Todo by ID:
 
 ```bash
-curl -X GET http://localhost:8000/todos/0
+curl -X GET http://localhost:8000/todos/1
 ```
 
 Update a Todo by ID:
 
 ```bash
-curl -X PUT http://localhost:8000/todos/0 -H "Content-Type: application/json" -d '{"text":"Updated Todo", "completed":true}'
+curl -X PUT http://localhost:8000/todos/1 -H "Content-Type: application/json" -d '{"text":"Updated Todo", "completed":true}'
 ```
 
 Delete a Todo by ID:
 
 ```bash
-curl -X DELETE http://localhost:8000/todos/0
+curl -X DELETE http://localhost:8000/todos/1
 ```
 
 ## Access OpenAPI (Swagger) UI
