@@ -22,7 +22,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Todo"
+              $ref: "#/components/schemas/TodoPayload"
       responses:
         "201":
           description: Todo created
@@ -61,7 +61,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Todo"
+              $ref: "#/components/schemas/TodoPayload"
       responses:
         "200":
           description: Todo updated
@@ -95,3 +95,13 @@ components:
           type: string
         completed:
           type: boolean
+    TodoPayload:
+      type: object
+      properties:
+        text:
+          type: string
+        completed:
+          type: boolean
+      required:
+        - text
+        - completed
