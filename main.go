@@ -22,6 +22,9 @@ func main() {
   \/_____/   \/_____/      \/_/\/_/   \/_/     \/_/ `)
 
 	err := http.ListenAndServe("localhost:8000", r)
+
+	fmt.Println("Server is running on port 8000")
+
 	if err != nil {
 		log.Error(err)
 	}
